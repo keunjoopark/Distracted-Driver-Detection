@@ -1,5 +1,5 @@
 # Distracted-Driver-Detection
-This project used Convolutional neural network to classfity the data set of Keggle competition: https://www.kaggle.com/c/state-farm-distracted-driver-detection.
+This project used Convolutional neural network to classfity the distracted driver detection with data set of Keggle competition: https://www.kaggle.com/c/state-farm-distracted-driver-detection.
 
 ## Data 
 Since I used google colab GPU environment, I resized all test,train images and create the X, y to make hdf5 file.
