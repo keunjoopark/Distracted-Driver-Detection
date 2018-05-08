@@ -2,8 +2,24 @@
 This project used Convolutional neural network to classfity the distracted driver detection with data set of Keggle competition: https://www.kaggle.com/c/state-farm-distracted-driver-detection.
 
 ## Data 
-Since I used google colab GPU environment, I resized all test,train images and create the X, y to make hdf5 file.
-I used color images than gray scale images to capture more momment. 
+Since I used google colab GPU environment, I resized all test,train images and create the X, y to make hdf5 file in my local drive. 
+I used color images than gray scale images to capture more momment. Sample code is here:
+
+```
+p_safe='C:/Users/user/Downloads/imgs/train/c0/'
+dirs = os.listdir(p_safe)
+
+def p_resize():
+    for item in dirs:
+        if os.path.isfile(p_safe+item):
+            im = Image.open(p_safe+item)
+            f, e = os.path.splitext(p_safe+item)
+            imResize = im.resize((64,64), Image.ANTIALIAS)
+            imResize.save(f+'.jpg', 'JPEG', quality=100)
+            
+p_resize()
+```
+I resized images by each classes to get a error immediately if occurs. The sample code of lableing the X and y is inloved in jupyter notebook. 
 
 ## Models
 I checked linear model first to see how model works and the number of parameters (10*64*64*3). After that, I chekced binary layer model with learning rate and no batch normalizaton. This simple model worked very well with 99% of accuracy.
