@@ -13,4 +13,4 @@ I wanted to check how model changed due to learning rate, so I checked same mode
 3. CNN_model_final: I changed higher dense layer to see further. But, the result was not that good as much as first model, I changed layer filters, Dense layer and Maxpooling sizes. I got a little bit better accuracy with 99% and lower CNN Error. So, I used this model to predict test data images.
 
 ## Conclusion
-My final model worked pretty well. To get further steps, I would like to predict the same number of test set with train set. I also want to try different optimizer like RMSprop and deep convolutional methods use transfer learning on such as VGG-16.
+My final model worked pretty well in training set. To get further steps, I would like to predict the same number of test set with train set. I also want to try different optimizer like RMSprop and deep convolutional methods use transfer learning on such as VGG-16.
